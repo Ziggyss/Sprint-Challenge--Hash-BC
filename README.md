@@ -26,9 +26,14 @@ Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
 
+The runtime complexity to access an index in a  dynamic array is O(1), to add or remove from the front the runtime complexity is O(n) because everything in the array needs to be shifted along during this operation. To add to the back would be O(1) unless the array is at capacity and needs to be resized. In this case it would then become O(n)
+
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+
+Blockchain is a chain of blocks that contain specific information. Within each block there is an index, a timestamp, a list of transactions, a proof of work and the hash of the previous block. The blocks are connected through the hash - each block containing the hash of the previous. The clever thing about blockchain is that if any of the items in a block is changed, then the chain is no longer valid as the hash will change and then the chain will be broken. This protects the chain from tampering and makes it difficult to attack.
  
-Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible? 
+Proof of work is a problem that needs to be solved for each block. It's used to confirm transactions and produce new blocks to the chain. It takes a lot of time to produce, because computers need to cycle through guesses to achieve the correct result. 
 
 ## Project Set Up
 
